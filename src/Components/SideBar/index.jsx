@@ -23,7 +23,7 @@ const SideBar = () => {
 
       <ul>
         <li className={activeStyle("#welcome") ? "active-tab" : ""}>
-          <a href="#welcome" className="skip-link">
+          <a href="#welcome">
             Welcome
           </a>
         </li>
