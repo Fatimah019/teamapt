@@ -7,10 +7,10 @@ const CryptoBank = () => {
   const location = useLocation();
   const myLeft = useRef();
 
-  {/*
+
   
- const checkLocation = location.hash =
- == "#cryptobank" ? "right-animate" : "no-right-animate";*/}
+ 
+
   const checkLocation2 = location.hash === "#cryptobank" ? "left-animate" : "left";
   return (
     <div className="crypto-container">
