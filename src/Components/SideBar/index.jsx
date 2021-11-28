@@ -13,7 +13,7 @@ const SideBar = () => {
     }
   };
 
-  let d = document.getElementById("home-con");
+
 
   return (
     <div className="side-bar">
