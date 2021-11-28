@@ -10,7 +10,7 @@ const Welcome = () => {
   }, []);
 
   return (
-    <div className="welcome-container" data-aos="fade-out">
+    <div className="welcome-container">
       <p style={{ color: "gray" }}>Your CryptoBank for</p>
       <p className="text-animate">Buy + 70 crypto</p>
       <button>

@@ -6,13 +6,12 @@
 }
 
 .no-right-animate {
-  /* display: none; */
   visibility: hidden;
-  /* flex: 0.6;
+  flex: 0.6;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: 2s ease-in-out normal animateCardDown; */
+  /* animation: 2s ease-in-out normal animateCardDown; */
 }
 
 .right-animate {

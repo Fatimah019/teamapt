@@ -1,7 +1,5 @@
 .welcome-container {
   margin: auto;
-  /* white-space: nowrap; */
-  /* margin-top: 4rem; */
 }
 .text-animate {
   color: orange;
@@ -11,7 +9,7 @@
   white-space: nowrap;
   margin: 0;
   margin-bottom: 1rem;
-  animation: 2s typing-erase 7s steps(1000, end) infinite, blink-caret 1.5s step-end;
+  animation: typing-erase 7s steps(1000, end) infinite, blink-caret 1.5s step-end;
   font-size: 2.5rem;
   letter-spacing: 4px;
 }
