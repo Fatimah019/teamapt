@@ -5,10 +5,8 @@ import CryptoBank from "../CryptoBank";
 import Exchange from "../Exchange";
 import Header from "../Header";
 import Welcome from "../Welcome";
-import PhoneImage from "../UI/phoneimage";
 import AOS from "aos";
 import "aos/dist/aos.css";
-// import { useLocation } from "react-router";
 
 const Home = () => {
   useEffect(() => {
@@ -73,7 +71,6 @@ const Home = () => {
       >
         Support
       </button>
-    
     </div>
   );
 };
