@@ -13,6 +13,8 @@ const SideBar = () => {
     }
   };
 
+  let d = document.getElementById("home-con");
+
   return (
     <div className="side-bar">
       <h3>
@@ -21,7 +23,9 @@ const SideBar = () => {
 
       <ul>
         <li className={activeStyle("#welcome") ? "active-tab" : ""}>
-          <a href="#welcome">Welcome</a>
+          <a href="#welcome" className="skip-link">
+            Welcome
+          </a>
         </li>
         <li className={activeStyle("#cryptobank") ? "active-tab" : ""}>
           <a href="#cryptobank">Crypto Bank</a>

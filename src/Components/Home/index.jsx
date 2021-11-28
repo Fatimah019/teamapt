@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import "./index.css";
 import SideBar from "../SideBar";
 import CryptoBank from "../CryptoBank";
@@ -15,11 +15,7 @@ const Home = () => {
       duration: 2000,
     });
   }, []);
-  const homeRef = useRef(null);
-  // const [homer, setHomeR] = useState(homeRef.current.offsetTop);
 
-  useEffect((e) => {}, []);
-  // console.log(homeRef.current.offsetTop + 200);
   const welcomeRef = useRef(null);
   const cryptoBankRef = useRef(null);
   const exchangeRef = useRef(null);
@@ -38,40 +34,38 @@ const Home = () => {
   };
 
   return (
-    <div ref={homeRef} onLoad={() => console.log(homeRef.current.offsetTop - 1200)}>
-      <div className="home" onScroll={handleScroll}>
-        <SideBar />
-        <div className="main">
-          <Header />
+    <div className="home" onScroll={handleScroll}>
+      <SideBar />
+      <div className="main">
+        <Header />
 
-          <div className="main-inner">
-            <div id="welcome" ref={welcomeRef}>
-              <Welcome />
-            </div>
-            <div id="cryptobank" ref={cryptoBankRef}>
-              <CryptoBank />
-            </div>
-            <div id="exchange" ref={exchangeRef}>
-              <Exchange />
-            </div>
+        <div className="main-inner">
+          <div id="welcome" ref={welcomeRef}>
+            <Welcome />
+          </div>
+          <div id="cryptobank" ref={cryptoBankRef}>
+            <CryptoBank />
+          </div>
+          <div id="exchange" ref={exchangeRef}>
+            <Exchange />
           </div>
         </div>
-        <button
-          className="support_btn"
-          style={{
-            position: "absolute",
-            bottom: "30px",
-            right: "30px",
-            padding: "0.5rem 1.5rem",
-            borderRadius: "20px",
-            border: "none",
-            background: "rgb(155, 13, 136)",
-            color: "#fff",
-          }}
-        >
-          Support
-        </button>
       </div>
+      <button
+        className="support_btn"
+        style={{
+          position: "absolute",
+          bottom: "30px",
+          right: "30px",
+          padding: "0.5rem 1.5rem",
+          borderRadius: "20px",
+          border: "none",
+          background: "rgb(155, 13, 136)",
+          color: "#fff",
+        }}
+      >
+        Support
+      </button>
     </div>
   );
 };

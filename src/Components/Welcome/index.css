@@ -60,3 +60,43 @@
     border-color: orange;
   }
 }
+
+.animate-card-to-crypto {
+  animation: 2s ease-in-out normal animateToCrypto forwards;
+}
+.animate-card-to-welcome {
+  animation: 1s ease-in-out normal animateToExchange forwards;
+}
+.animate-card-to-welcome-n {
+  animation: 1s ease-in-out normal animateToWelcome forwards;
+}
+@keyframes animateToCrypto {
+  from {
+    transform: translate(-100%, 200%);
+    display: none;
+    visibility: hidden;
+  }
+  to {
+    transform: translate(50%, 100%);
+  }
+}
+@keyframes animateToWelcome {
+  from {
+    transform: translate(100%, -100%);
+    display: none;
+    visibility: hidden;
+  }
+  to {
+    transform: translate(-0%, 10%);
+  }
+}
+@keyframes animateToExchange {
+  from {
+    transform: translate(40%, 100%);
+    /* display: none; */
+    /* visibility: hidden; */
+  }
+  to {
+    transform: translate(100%, -100%);
+  }
+}

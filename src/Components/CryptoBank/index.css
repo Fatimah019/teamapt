@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   /* margin-top: 2rem; */
+  position: relative;
 }
 
 .no-right-animate {
@@ -26,6 +27,16 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
+  /* animation: 1s ease-in-out normal animateCard forwards; */
+}
+.left-animate {
+  flex: 0.4;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  animation: 1s ease-in-out normal animateLeft forwards;
+  position: relative;
 }
 .crypto-container .left .left-inner {
   /* width: 60%; */
@@ -71,5 +82,16 @@
     transform: translate(-100%, 100%);
     left: 0%;
     display: none;
+  }
+}
+@keyframes animateLeft {
+  from {
+    transform: translate(0%, 100%);
+    visibility: hidden;
+    /* left: 100%; */
+  }
+  to {
+    transform: translate(0%, -0%);
+    visibility: visible;
   }
 }

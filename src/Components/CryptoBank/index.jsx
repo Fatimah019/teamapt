@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./index.css";
 import Card from "../UI/atmcard";
 import { useLocation } from "react-router";
 
 const CryptoBank = () => {
   const location = useLocation();
+  const myLeft = useRef();
 
   const checkLocation = location.hash === "#cryptobank" ? "right-animate" : "no-right-animate";
+  const checkLocation2 = location.hash === "#cryptobank" ? "left-animate" : "left";
   return (
     <div className="crypto-container">
-      <div className="left">
+      <div className={checkLocation2} ref={myLeft}>
         <div className="left-inner">
           <p className="top-p">Cryptobank</p>
           <h1>Card with up to 5% Cashback</h1>
@@ -17,9 +19,9 @@ const CryptoBank = () => {
           <button>Get started</button>
         </div>
       </div>
-      <div className={checkLocation}>
+      {/* <div className={checkLocation}>
         <Card />
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -56,3 +56,6 @@
   align-items: center;
   justify-content: center;
 }
+.skip-link:focus {
+  top: 30%;
+}
