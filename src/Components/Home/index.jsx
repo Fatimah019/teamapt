@@ -24,9 +24,9 @@ const Home = () => {
 
   const handleScroll = (evt) => {
     const scroll_y_value = evt.target.scrollTop;
-    if (scroll_y_value + 140 > exchangeRef.current.offsetTop) {
+    if (scroll_y_value > exchangeRef.current.offsetTop - 100) {
       history.push("/#exchange");
-    } else if (scroll_y_value + 140 > cryptoBankRef.current.offsetTop) {
+    } else if (scroll_y_value > cryptoBankRef.current.offsetTop - 100) {
       history.push("/#cryptobank");
     } else {
       history.push("/#welcome");
@@ -37,17 +37,18 @@ const Home = () => {
     <div className="home" onScroll={handleScroll}>
       <SideBar />
       <div className="main">
-        <div id="header">
-          <Header />
-        </div>
-        <div id="welcome" ref={welcomeRef}>
-          <Welcome />
-        </div>
-        <div id="cryptobank" ref={cryptoBankRef}>
-          <CryptoBank />
-        </div>
-        <div id="exchange" ref={exchangeRef}>
-          <Exchange />
+        <Header />
+
+        <div className="main-inner">
+          <div id="welcome" ref={welcomeRef}>
+            <Welcome />
+          </div>
+          <div id="cryptobank" ref={cryptoBankRef}>
+            <CryptoBank />
+          </div>
+          <div id="exchange" ref={exchangeRef}>
+            <Exchange />
+          </div>
         </div>
       </div>
       <button

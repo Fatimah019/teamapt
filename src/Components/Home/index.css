@@ -27,7 +27,6 @@
   width: 75%;
   margin-left: 22.5%;
   margin-right: 2.5%;
-  padding-top: 1rem;
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
@@ -40,14 +39,17 @@
 #welcome,
 #cryptobank,
 #exchange {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
-#header {
-  position: sticky;
-  top: 0;
-  padding: 1rem 0rem;
-  z-index: 1;
+
+.main {
+  /* background: blue; */
 }
+.main-inner {
+  /* margin-top: 4rem; */
+  /* background: red; */
+}
+
 /* 
 
 

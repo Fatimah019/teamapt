@@ -1,8 +1,17 @@
 import React from "react";
 import "./index.css";
 import Card from "../UI/atmcard";
+import { useLocation } from "react-router";
 
 const CryptoBank = () => {
+  const location = useLocation();
+  console.log(location.hash);
+
+  if (location.hash === "#cryptobank") {
+    console.log("yay");
+  }
+
+  const checkLocation = location.hash === "#cryptobank" ? "right-animate" : "no-right-animate";
   return (
     <div className="crypto-container">
       <div className="left">
@@ -13,7 +22,7 @@ const CryptoBank = () => {
           <button>Get started</button>
         </div>
       </div>
-      <div className="right">
+      <div className={checkLocation}>
         <Card />
       </div>
     </div>
