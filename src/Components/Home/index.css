@@ -2,12 +2,8 @@
   display: none;
 }
 .home {
-  position: relative;
-  /* width: 80%; */
   margin: auto;
-  padding: 1rem;
   border-radius: 10px;
-  /* height: 80vh; */
   height: 550px;
   width: 80vw;
   display: flex;
@@ -40,3 +36,33 @@
 #exchange {
   margin: 4rem 0rem;
 }
+
+#welcome,
+#cryptobank,
+#exchange {
+  margin-top: 4rem;
+}
+#header {
+  position: sticky;
+  top: 0;
+  padding: 1rem 0rem;
+  z-index: 1;
+}
+/* 
+
+
+.main {
+  background: purple;
+  position: relative;
+  padding: 0;
+}
+.main .header {
+  height: 4rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 2rem 0rem;
+  background: red;
+} */

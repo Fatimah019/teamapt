@@ -29,6 +29,7 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  color: #000;
 
   /* set defaults */
   --surface2: var(--surface2-light);
@@ -73,12 +74,12 @@ body {
 }
 
 @keyframes animate-phone {
-  0% {
+  from {
     opacity: 1;
     top: 30%;
     display: block;
   }
-  100% {
+  to {
     opacity: 0;
     top: -100%;
     display: none;

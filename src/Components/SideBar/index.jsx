@@ -13,19 +13,6 @@ const SideBar = () => {
     }
   };
 
-  // useEffect(() => {
-  //   const tabs = document.querySelectorAll("my-tab");
-  //   window.onscroll = () => {
-  //     let current = "";
-  //     tabs.forEach((tab) => {
-  //       const activeSection = tab.offsetTop;
-
-  //       // eslint-disable-next-line no-restricted-globals
-  //       if (pageYOffset > activeSection - 60) {
-  //       }
-  //     });
-  //   };
-  // }, []);
   return (
     <div className="side-bar">
       <h3>
@@ -34,7 +21,6 @@ const SideBar = () => {
 
       <ul>
         <li className={activeStyle("#welcome") ? "active-tab" : ""}>
-          {/* <li className="my-tab"> */}
           <a href="#welcome">Welcome</a>
         </li>
         <li className={activeStyle("#cryptobank") ? "active-tab" : ""}>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./index.css";
 import SideBar from "../SideBar";
 import CryptoBank from "../CryptoBank";
@@ -7,6 +7,7 @@ import Header from "../Header";
 import Welcome from "../Welcome";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useHistory } from "react-router";
 
 const Home = () => {
   useEffect(() => {
@@ -15,44 +16,37 @@ const Home = () => {
     });
   }, []);
 
-  // const location = useLocation();
-  // if(location!=="#welcome"){
+  const welcomeRef = useRef(null);
+  const cryptoBankRef = useRef(null);
+  const exchangeRef = useRef(null);
 
-  // }
+  let history = useHistory();
 
-  // const [offset, setOffset] = useState(0);
-  // useEffect(() => {
-  //   // window.onscroll = () => {
-  //   //   setOffset(window.pageYOffset);
-  //   // };
-  // }, []);
+  const handleScroll = (evt) => {
+    const scroll_y_value = evt.target.scrollTop;
+    if (scroll_y_value + 140 > exchangeRef.current.offsetTop) {
+      history.push("/#exchange");
+    } else if (scroll_y_value + 140 > cryptoBankRef.current.offsetTop) {
+      history.push("/#cryptobank");
+    } else {
+      history.push("/#welcome");
+    }
+  };
 
-  // const cryptoRef = useRef(null);
-
-  // // eslint-disable-next-line react-hooks/exhaustive-deps
-  // const handleScroll = useCallback(() => {
-  //   console.log(cryptoRef);
-  // });
-
-  // useEffect(() => {
-  //   const d = cryptoRef.current;
-  //   console.log(d);
-  //   // d.addEventListener("scroll", handleScroll);
-  // }, [handleScroll]);
-
-  // console.log(offset);
   return (
-    <div className="home">
+    <div className="home" onScroll={handleScroll}>
       <SideBar />
       <div className="main">
-        <Header />
-        <div id="welcome" data-aos="fade-top-right">
+        <div id="header">
+          <Header />
+        </div>
+        <div id="welcome" ref={welcomeRef}>
           <Welcome />
         </div>
-        <div id="cryptobank">
+        <div id="cryptobank" ref={cryptoBankRef}>
           <CryptoBank />
         </div>
-        <div id="exchange">
+        <div id="exchange" ref={exchangeRef}>
           <Exchange />
         </div>
       </div>

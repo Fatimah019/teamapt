@@ -1,18 +1,16 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
-import Home from "../Home";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 function Routes() {
   return (
     <Switch>
-      {/* <Route
-          exact
-          path="/"
-          render={() => {
-            return <Redirect exact to="/#welcome" />;
-          }}
-        /> */}
-      <Route exact path="/" component={Home} />
+      <Route
+        exact
+        path="/"
+        render={() => {
+          return <Redirect exact to="/#welcome" />;
+        }}
+      />
     </Switch>
   );
 }
