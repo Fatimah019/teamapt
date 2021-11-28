@@ -30,10 +30,10 @@ const SideBar = () => {
           <a href="#exchange">Exchange</a>
         </li>
         <li className={activeStyle("#trading") ? "active-tab" : ""}>
-          <a href="#exchange">Trading</a>
+          <a href="#trading">Trading</a>
         </li>
         <li className={activeStyle("#about") ? "active-tab" : ""}>
-          <a href="#exchange">About</a>
+          <a href="#about">About</a>
         </li>
       </ul>
       <div className="socials">

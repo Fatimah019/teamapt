@@ -6,7 +6,8 @@
 }
 
 .no-right-animate {
-  display: none;
+  /* display: none; */
+  visibility: hidden;
   /* flex: 0.6;
   display: flex;
   align-items: center;
@@ -19,7 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: 1s ease-in-out normal animateCard;
+  animation: 1s ease-in-out normal animateCard forwards;
 }
 .crypto-container .left {
   flex: 0.4;
@@ -52,12 +53,14 @@
   from {
     transform: translate(-100%, 100%);
     left: 0;
-    display: none;
+    /* display: none; */
+    visibility: hidden;
   }
   to {
     transform: translate(0%, 0%);
     left: 100%;
-    display: block;
+    /* display: block; */
+    visibility: visible;
   }
 }
 @keyframes animateCardDown {

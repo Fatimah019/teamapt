@@ -5,11 +5,6 @@ import { useLocation } from "react-router";
 
 const CryptoBank = () => {
   const location = useLocation();
-  console.log(location.hash);
-
-  if (location.hash === "#cryptobank") {
-    console.log("yay");
-  }
 
   const checkLocation = location.hash === "#cryptobank" ? "right-animate" : "no-right-animate";
   return (

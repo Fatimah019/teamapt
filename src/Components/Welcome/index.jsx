@@ -12,7 +12,7 @@ const Welcome = () => {
   return (
     <div className="welcome-container" data-aos="fade-out">
       <p style={{ color: "gray" }}>Your CryptoBank for</p>
-      <p style={{ fontSize: "3rem" }}>Buy + 70 crypto</p>
+      <p className="text-animate">Buy + 70 crypto</p>
       <button>
         <i className="fa fa-angle-right"></i> Watch video
       </button>

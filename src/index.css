@@ -64,24 +64,39 @@ body {
   top: 30%;
   right: -5%;
   z-index: 9999999999999;
+  animation: 2s ease-in-out normal animate-phone-in forwards;
 }
 .phone-container-invisible {
   position: absolute;
   top: 30%;
   right: -5%;
   z-index: 9999999999999;
-  animation: 2s ease-in-out normal animate-phone;
+  animation: 2s ease-in-out normal animate-phone forwards;
 }
 
 @keyframes animate-phone {
   from {
     opacity: 1;
     top: 30%;
-    display: block;
+    /* display: block; */
+    visibility: visible;
   }
   to {
     opacity: 0;
     top: -100%;
-    display: none;
+    visibility: hidden;
+  }
+}
+
+@keyframes animate-phone-in {
+  from {
+    opacity: 0;
+    top: -100%;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    top: 30%;
+    visibility: visible;
   }
 }
