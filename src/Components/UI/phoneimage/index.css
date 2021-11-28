@@ -1,0 +1,111 @@
+.phone-container {
+  font-size: x-small;
+  padding: 1.2rem 1rem;
+  border-radius: 25px;
+  width: 14rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid hsl(var(--brand-hue) 10% 50% / 15%);
+  box-shadow: 0 1rem 0.5rem -0.5rem;
+  box-shadow: 0 2.8px 2.2px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.03)),
+    0 6.7px 5.3px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.01)),
+    0 12.5px 10px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.02)),
+    0 22.3px 17.9px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.02)),
+    0 41.8px 33.4px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.03)),
+    0 100px 80px hsl(var(--surface-shadow) / var(--shadow-strength));
+  background-color: var(--surface2);
+  color: var(--text2);
+  /* animation: 2s ease-in-out normal animateCard; */
+}
+.phone-container .phone-container-header,
+.phone-container .phone-container-footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.phone-container .phone-container-footer {
+  margin-top: 0.5rem;
+}
+.phone-container-footer i {
+  color: rgba(0, 0, 0, 0.7);
+}
+.phone-container .price {
+  background-color: rgba(163, 163, 163, 0.2);
+  border: 2px solid rgba(248, 246, 246, 0.8);
+  transform: rotate(-1deg);
+  box-shadow: 0 2.8px 2.2px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.03)),
+    0 6.7px 5.3px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.01));
+  border-radius: 4px;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 1rem 0rem;
+  font-weight: bolder;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+}
+.all-transactions {
+  height: 15rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.transactions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.transactions-header .heading-text {
+  color: gray;
+}
+.transactions-header a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+.crypto-transacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(219, 218, 218);
+  padding: 0.5rem 0rem;
+  margin: 4px 0px;
+}
+.tansaction-left {
+  display: flex;
+  align-items: center;
+}
+.tansaction-left img {
+  margin-right: 5px;
+}
+.price-percentage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.less-than-one {
+  color: red;
+  font-weight: 500;
+  font-size: smaller;
+}
+.greater-than-one {
+  color: rgb(100, 212, 100);
+  font-weight: 500;
+  font-size: smaller;
+}
+.other-transactions {
+  margin-top: 1.5rem;
+}
+
+@keyframes animateCard {
+  from {
+    transform: translate(-100%, 100%);
+    left: 0;
+  }
+  to {
+    transform: translate(0%, 0%);
+    left: 100%;
+  }
+}

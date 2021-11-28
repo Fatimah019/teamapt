@@ -1,0 +1,39 @@
+.exchange-container {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.exchange-container .left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.exchange-container .right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.exchange-container .right .right-inner {
+  width: 60%;
+}
+.right-inner .top-p {
+  color: #f33bea;
+}
+.right-inner button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 0.5rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+}
+@media screen and (max-width: 900px) {
+  .exchange-container {
+    flex-direction: column;
+  }
+}

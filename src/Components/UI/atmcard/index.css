@@ -1,0 +1,112 @@
+.card-container {
+  width: 100%;
+  position: relative;
+  height: 50vh;
+  overflow-y: hidden;
+}
+.card-container-top-first {
+  position: absolute;
+  top: 20%;
+  bottom: 25%;
+  left: 10%;
+  background-color: #fff;
+  box-shadow: 2px 1px 2px rgb(76, 72, 72);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 18rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: rotate(35deg);
+  background: linear-gradient(
+    to right top,
+    #9c3bdd,
+    #e5d0eb,
+    #ffffff,
+    #6e3c7c,
+    #ffffff,
+    #ffffff,
+    #f1eaf3,
+    #4279e0,
+    #e5d0eb
+  );
+  background-position: 100% 50%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.card-container-top-second {
+  position: absolute;
+  top: 8%;
+  bottom: 25%;
+  left: 10%;
+  background-color: #fff;
+  box-shadow: 2px 1px 2px rgb(76, 72, 72);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 18rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: rotate(10deg);
+  background: linear-gradient(
+    to right top,
+    #9c3bdd,
+    #e5d0eb,
+    #ffffff,
+    #6e3c7c,
+    #ffffff,
+    #ffffff,
+    #f1eaf3,
+    #4279e0,
+    #e5d0eb
+  );
+  background-position: 100% 50%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.card-container-bottom-first {
+  position: absolute;
+  top: 27%;
+  right: 67%;
+  background-color: #fff;
+  box-shadow: 2px 1px 2px rgb(76, 72, 72);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 18rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: myKey ease 2s;
+  transform: rotate(75deg);
+}
+.card-container-bottom-second {
+  position: absolute;
+  top: 31%;
+  bottom: 25%;
+  right: 20%;
+  background-color: #fff;
+  box-shadow: 2px 1px 2px rgb(76, 72, 72);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 15rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: myKey ease 2s;
+  transform: rotate(60deg);
+}
+
+.card-header,
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-container-top-first + .card-container-bottom-first {
+  display: none;
+}

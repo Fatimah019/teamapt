@@ -1,0 +1,232 @@
+//select tab component
+export const SelectTabs = ({name, action})=>{
+ return (
+  <div className="select-tab">
+    {name} <span onClick={action}>      
+         <AngleDownIcon/>
+    </span>
+  </div>
+)
+}
+
+.select-tab{
+    background: #fff;
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+}
+.select-tab span{
+    margin-left: 10px;
+}
+
+
+
+const optionTabs=[
+    {
+         name: "World",
+         action:()=>console.log("hey")
+    },
+    {
+         name: "Following",
+         action:()=>console.log("hey")
+    },
+   {
+         name: "Popular",
+         action:()=>console.log("hey")
+    },
+   {
+         name: "Post",
+         action:()=>console.log("hey")
+    },
+   {
+         name: "Gender",
+         action:()=>console.log("hey")
+    },
+   {
+         name: "Location",
+         action:()=>console.log("hey")
+    },
+   {
+         name: "Profession",
+         action:()=>console.log("hey")
+    }
+]
+
+
+//image card component
+export const ImageCard = ({image_url, name, location})=>{
+ return (
+  <div className="image-card"
+   style={{backgroundImage: {image_url}}}
+ >
+       <div className="image-card-content-con">      
+         <p>{name}</p>
+         <div><LocationIcon/> 
+             <span>{location}</span>
+         </div>
+      </div>
+  </div>
+)
+}
+
+.image-card{
+    border-radius: 8px;
+    height:15rem;
+    display:flex;
+    align-items: flex-end;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+.image-card-content-con{
+    width:80%;
+    margin: auto;
+}
+.image-card-content-con p{
+    font-weight: bold;
+}
+.image-card-content-con div span{
+    margin-left: 10px;
+}
+
+
+<div className="container">
+    <div className="sidebar">
+         <img src="" alt="icon" />
+         <ul>
+             <li> 
+                 <NavLinks
+                    name="Home"
+                    url="/"
+                    icon=""
+                />
+            </li>
+            <li>
+                <NavLinks
+                    name="Message"
+                    url="/message"
+                    icon=""
+                />
+          </li>
+          <li>SHARE</li>
+          <li>
+               <NavLinks
+                    name="Ranking"
+                    url="/"
+                    icon=""
+                />
+           </li>
+            <li>
+               <NavLinks
+                    name="Challenge"
+                    url="/"
+                    icon=""
+                />
+           </li>
+            <li>
+               <NavLinks
+                    name="Party"
+                    url="/"
+                    icon=""
+                />
+           </li>
+            <li>
+               <NavLinks
+                    name="Connect"
+                    url="/"
+                    icon=""
+                />
+           </li>
+            <li>
+               <NavLinks
+                    name="Parade"
+                    url="/"
+                    icon=""
+                />
+           </li>
+           <li>
+               <NavLinks
+                    name="Group"
+                    url="/"
+                    icon=""
+                />
+           </li>
+        </ul>
+    </div>
+
+    <div className="main">
+         <header>
+           
+            <div>
+               <OpenBar />
+               <CloseBar/>
+            </div>
+             <div className="search-container"> 
+                <SearchIcon/>
+                <form>
+                    <input type="text"   placeholder="Find Something" className="search-input"/>
+                   <input type="submit"  value="Search" className="search-send-btn"/>
+                </form>
+             </div>
+             <NotificationIcon/>
+             <img src="" alt="profile-pic" />
+             <div>
+               <label>Abigail</label>
+               <AngleDownIcon/>/app menu/
+             </div>
+         </header>
+
+         <div className="option-tabs">
+             {
+                 optionTabs.map((tab)=>{
+                      return <SelectTabs
+                          name={tab.name}
+                          action={tab.action}
+                      />
+                  })
+              }
+         </div>
+         <div className="image-container">
+             {
+                data.map((item) => {
+                     return <ImageCard
+                         image_url={item.url}
+                         name={item.name}
+                         location={item.location}
+                     />
+                })
+             }
+         </div>
+    <div>
+</div>
+
+//css
+
+. container {
+    display: flex;
+}
+.sidebar{
+    flex: 1;
+    border-right:1px solid grey;
+}
+.main{
+    flex:5;
+    padding:2rem;
+}
+.option-tabs{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.image-container{
+    display: grid;
+    grid-gap: 1rem;
+    align-items: stretch;
+    grid-templates-column:repeat(18%)
+}
+
+@media screen and (max-width){
+    .sidebar{
+       display:none;
+    }
+}
