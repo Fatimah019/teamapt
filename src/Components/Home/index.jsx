@@ -14,7 +14,7 @@ const Home = () => {
     if(location.hash==="#cryptobank"){
       document.getElementById("welcome").style.display="none"
     } 
-  }, []);
+  }, [location]);
   
   const welcomeRef = useRef(null);
   const cryptoBankRef = useRef(null);
