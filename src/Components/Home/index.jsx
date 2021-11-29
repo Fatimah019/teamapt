@@ -25,7 +25,7 @@ const Home = () => {
 
   const handleScroll = (evt) => {
     const scroll_y_value = evt.target.scrollTop;
-    if (scroll_y_value > cryptoBankRef.current.offsetTop + 150) {
+    if (scroll_y_value > cryptoBankRef.current.offsetTop + 250) {
       history.push("/#exchange");
       
     } else if (scroll_y_value > welcomeRef.current.offsetTop + 200) {
