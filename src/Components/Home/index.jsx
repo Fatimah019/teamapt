@@ -27,11 +27,15 @@ const Home = () => {
     const scroll_y_value = evt.target.scrollTop;
     if (scroll_y_value > cryptoBankRef.current.offsetTop + 150) {
       history.push("/#exchange");
-      document.getElementById("exchange").style.paddingTop="20rem"
+      document.getElementById("exchange").style.paddingTop="7rem"
     } else if (scroll_y_value > welcomeRef.current.offsetTop + 200) {
       history.push("/#cryptobank");
+      document.getElementById("cryptobank").style.paddingTop="7rem
+
+
     } else {
       history.push("/#welcome");
+      document.getElementById("welcome").style.paddingTop="7rem
     }
   };
 
