@@ -1,13 +1,16 @@
 import React, { useRef } from "react";
 import "./index.css";
-import Card from "../UI/atmcard";
+
 import { useLocation } from "react-router";
 
 const CryptoBank = () => {
   const location = useLocation();
   const myLeft = useRef();
 
-  const checkLocation = location.hash === "#cryptobank" ? "right-animate" : "no-right-animate";
+
+  
+ 
+
   const checkLocation2 = location.hash === "#cryptobank" ? "left-animate" : "left";
   return (
     <div className="crypto-container">

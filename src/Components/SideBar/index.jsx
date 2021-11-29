@@ -13,8 +13,9 @@ const SideBar = () => {
     }
   };
 
-  let d = document.getElementById("home-con");
-
+ const goToSection =(id)=>{
+   document.getElementById(id).style.paddingTop="7rem"
+ }
   return (
     <div className="side-bar">
       <h3>
@@ -22,15 +23,15 @@ const SideBar = () => {
       </h3>
 
       <ul>
-        <li className={activeStyle("#welcome") ? "active-tab" : ""}>
-          <a href="#welcome" className="skip-link">
+        <li className={activeStyle("#welcome") ? "active-tab" : ""} onClick={()=>goToSection("welcome")}>
+          <a href="#welcome">
             Welcome
           </a>
         </li>
-        <li className={activeStyle("#cryptobank") ? "active-tab" : ""}>
+        <li className={activeStyle("#cryptobank") ? "active-tab" : ""} onClick={()=>goToSection("cryptobank")}>
           <a href="#cryptobank">Crypto Bank</a>
         </li>
-        <li className={activeStyle("#exchange") ? "active-tab" : ""}>
+        <li className={activeStyle("#exchange") ? "active-tab" : ""} onClick={()=>goToSection("exchange")}>
           <a href="#exchange">Exchange</a>
         </li>
         <li className={activeStyle("#trading") ? "active-tab" : ""}>
