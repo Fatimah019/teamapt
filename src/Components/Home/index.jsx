@@ -11,7 +11,7 @@ import { useHistory , useLocation} from "react-router";
 const Home = () => {
   const location = useLocation ()
   useEffect(() => {
-    if(location.hash=="#cryptobank"){
+    if(location.hash==="#cryptobank"){
       document.getElementById("welcome").style.display="none"
     } 
   }, []);
