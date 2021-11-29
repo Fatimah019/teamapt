@@ -15,7 +15,7 @@ const Home = () => {
       duration: 2000,
     });
   }, []);
-
+  
   const welcomeRef = useRef(null);
   const cryptoBankRef = useRef(null);
   const exchangeRef = useRef(null);
@@ -31,7 +31,7 @@ const Home = () => {
     } else if (scroll_y_value > welcomeRef.current.offsetTop + 200) {
       history.push("/#cryptobank");
       
-
+      document.getElementById("welcome").style.display = "none"
 
     } else {
       history.push("/#welcome");
