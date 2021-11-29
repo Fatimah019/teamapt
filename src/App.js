@@ -7,16 +7,25 @@ import { useLocation } from "react-router-dom";
 function App() {
   const location = useLocation();
   const [windowWidth, setWindowWidth] = useState("")
+  const [styleWeb, setStyleWeb] = useState({ 
+    display: "block"
+  })
   
   useEffect (()=>{
       if(window.innerWidth < 900){
-        setWindowWidth(<h1>Page Cannot Be Viewed On Screens Less Than 90px</h1>)
+        setWindowWidth(<h1>Page Cannot Be Viewed On Screens Less Than 900px</h1>)
+        setStyleWeb({display: "none"})
+      }
+      else{
+        setWindowWidth("")
+
+        setStyleWeb({display: "block"})
       }
   },[windowWidth])
 
   const checkPhone = location.hash === "#welcome" ? "phone-container-visible" : "phone-container-invisible";
   return (
-    <div className="main-home">
+    <div className="main-home" style={{styleWeb}}>
       {windowWidth}
       <div className={checkPhone}>
         <PhoneImage />
