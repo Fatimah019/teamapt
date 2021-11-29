@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import "./index.css";
 import SideBar from "../SideBar";
 import CryptoBank from "../CryptoBank";
@@ -6,20 +6,12 @@ import Exchange from "../Exchange";
 import Header from "../Header";
 import Welcome from "../Welcome";
 
-import { useHistory , useLocation} from "react-router";
+import { useHistory } from "react-router";
 
 const Home = () => {
-  const location = useLocation ()
-  useEffect(() => {
-    if(location.hash==="#cryptobank"){
-      document.getElementById("welcome").style.display="none"
-    } 
-  }, [location]);
-  
   const welcomeRef = useRef(null);
   const cryptoBankRef = useRef(null);
   const exchangeRef = useRef(null);
-  
 
   let history = useHistory();
 
@@ -27,15 +19,10 @@ const Home = () => {
     const scroll_y_value = evt.target.scrollTop;
     if (scroll_y_value > cryptoBankRef.current.offsetTop + 150) {
       history.push("/#exchange");
-      
     } else if (scroll_y_value > welcomeRef.current.offsetTop + 200) {
       history.push("/#cryptobank");
-      
-      
-
     } else {
       history.push("/#welcome");
-      
     }
   };
 

@@ -4,6 +4,11 @@
   height: 50vh;
   overflow-y: hidden;
 }
+.card-logo {
+  width: 30px;
+  height: 20px;
+  border-radius: 20px;
+}
 .card-container-top-first {
   position: absolute;
   top: 20%;

@@ -35,16 +35,28 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  animation: 1s ease-in-out normal animateLeft forwards;
   position: relative;
 }
-.crypto-container .left .left-inner {
+.left-inner-from-up {
   /* width: 60%; */
+  /* flex: 0.4;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative; */
+  width: 60%;
+  flex: 0.4;
+  animation: 1s ease-in-out normal animateLeftToTop forwards;
 }
-.crypto-container .left-inner .top-p {
+.left-inner-from-down {
+  width: 60%;
+  flex: 0.4;
+  animation: 1s ease-in-out normal animateLeftToDown forwards;
+}
+.crypto-container .top-p {
   color: #f33bea;
 }
-.crypto-container .left-inner button {
+.crypto-container button {
   background-color: #000;
   color: #fff;
   border: none;
@@ -52,6 +64,7 @@
   padding: 0.5rem 1.5rem;
   margin-top: 1rem;
   border-radius: 4px;
+  /* width: 0; */
 }
 @media screen and (max-width: 900px) {
   .crypto-container {
@@ -84,7 +97,18 @@
     display: none;
   }
 }
-@keyframes animateLeft {
+@keyframes animateLeftToTop {
+  from {
+    transform: translate(0%, -100%);
+    visibility: visible;
+    /* left: 100%; */
+  }
+  to {
+    transform: translate(0%, -100%);
+    visibility: hidden;
+  }
+}
+@keyframes animateLeftToDown {
   from {
     transform: translate(0%, 100%);
     visibility: hidden;

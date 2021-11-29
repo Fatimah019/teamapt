@@ -3,8 +3,15 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  animation: 1s ease-in-out normal animateExchageUp forwards;
 }
-
+.no-exchange-animate {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  animation: 1s ease-in-out normal animateExchageDown forwards;
+}
 .exchange-container .left {
   flex: 1;
   display: flex;
@@ -35,5 +42,30 @@
 @media screen and (max-width: 900px) {
   .exchange-container {
     flex-direction: column;
+  }
+}
+
+@keyframes animateExchageUp {
+  from {
+    transform: translate(0%, 100%);
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    transform: translate(0%, -10%);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@keyframes animateExchageDown {
+  from {
+    transform: translate(0%, 50%);
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    transform: translate(0%, 100%);
+    visibility: hidden;
+    opacity: 0;
   }
 }

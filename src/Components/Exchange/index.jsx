@@ -1,10 +1,15 @@
 import React from "react";
 import "./index.css";
 import PhoneImage from "../UI/phoneimage";
+import { useLocation } from "react-router";
 
 const Exchange = () => {
+  const location = useLocation();
+
+  const checkLocation = location.hash === "#exchange" ? "exchange-container" : "no-exchange-animate";
+
   return (
-    <div className="exchange-container">
+    <div className={checkLocation}>
       <div className="left">
         <PhoneImage />
       </div>

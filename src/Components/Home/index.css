@@ -38,10 +38,11 @@
   margin: 4rem 0rem;
 }
 
-#welcome,
-#cryptobank,
-#exchange {
-  margin-top: 2rem;
+#cryptobank {
+  padding: 4rem 0rem 3rem 0rem;
+}
+.exchange {
+  padding-top: 1rem;
 }
 .home .main .main-inner {
   position: relative;

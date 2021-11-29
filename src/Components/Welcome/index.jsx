@@ -22,11 +22,13 @@ const Welcome = () => {
       : "";
   return (
     <div className="welcome-container" id="home-con">
-      <p style={{ color: "gray" }}>Your CryptoBank for</p>
-      <p className="text-animate">Buy + 70 crypto</p>
-      <button>
-        <i className="fa fa-angle-right"></i> Watch video
-      </button>
+      <div id="home-con-top">
+        <p style={{ color: "gray" }}>Your CryptoBank for</p>
+        <p className="text-animate">Buy + 70 crypto</p>
+        <button>
+          <i className="fa fa-angle-right"></i> Watch video
+        </button>
+      </div>
 
       <div style={{ marginTop: "2rem" }} className={checkLocation}>
         <Card card_first card_second />
