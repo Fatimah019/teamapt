@@ -25,14 +25,17 @@ function App() {
 
   const checkPhone = location.hash === "#welcome" ? "phone-container-visible" : "phone-container-invisible";
   return (
+    <>
+    {windowWidth}
     <div className="main-home" style={{styleWeb}}>
-      {windowWidth}
+      
       <div className={checkPhone}>
         <PhoneImage />
       </div>
       <Home />
       <Routes />
     </div>
+    </>
   );
 }
 
