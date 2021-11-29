@@ -14,16 +14,23 @@ function App() {
       {window.innerWidth < 900 ? (
         <div
           style={{
+            background: "#fff",
+            width: "100%",
             display: "flex",
+            flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
             height: "100vh",
-            width: "90%",
             textAlign: "center",
             margin: "auto",
+            padding: "1rem 2rem",
           }}
         >
-          <h2>Page Cannot Be Viewed On Screens Less Than 900px width, View On Your DeskTop </h2>
+          <img src="/assets/images/oops.jpg" alt="oops" style={{ objectFit: "contain", marginBottom: "2rem" }} />
+          <h3>
+            Page Cannot Be Viewed On Screens Less Than 900px width, View On Your DeskTop, Laptop or Larger Screens For A
+            Better Experience. Thank you.{" "}
+          </h3>
         </div>
       ) : (
         <div className="main-home">
