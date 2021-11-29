@@ -16,7 +16,7 @@ function App() {
     {
        window.innerWidth<900?
       <div
-     style={{display:"flex", alignItems:"center", justifyContent: "center", height: "100vh, width: "90%", margin:"auto"}}>
+     style={{display:"flex", alignItems:"center", justifyContent: "center", height: "100vh", width: "90%", margin:"auto"}}>
       <h2>Page Cannot Be Viewed On Screens Less Than 900px</h2>
       </div>: 
 
