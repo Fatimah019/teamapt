@@ -5,15 +5,15 @@ import CryptoBank from "../CryptoBank";
 import Exchange from "../Exchange";
 import Header from "../Header";
 import Welcome from "../Welcome";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useHistory } from "react-router";
+
+import { useHistory , useLocation} from "react-router";
 
 const Home = () => {
+  const location = useLocation ()
   useEffect(() => {
-    AOS.init({
-      duration: 2000,
-    });
+    if(location.hash=="#cryptobank"){
+      document.getElementById("welcome").style.display="none"
+    } 
   }, []);
   
   const welcomeRef = useRef(null);
@@ -25,13 +25,13 @@ const Home = () => {
 
   const handleScroll = (evt) => {
     const scroll_y_value = evt.target.scrollTop;
-    if (scroll_y_value > cryptoBankRef.current.offsetTop + 250) {
+    if (scroll_y_value > cryptoBankRef.current.offsetTop + 150) {
       history.push("/#exchange");
       
     } else if (scroll_y_value > welcomeRef.current.offsetTop + 200) {
       history.push("/#cryptobank");
       
-      document.getElementById("welcome").style.display = "none"
+      
 
     } else {
       history.push("/#welcome");
