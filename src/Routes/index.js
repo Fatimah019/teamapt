@@ -1,9 +1,10 @@
 import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Route, Redirect, BrowserRouter } from "react-router-dom";
+import Signup from "../Components/Signup";
 
 function Routes() {
   return (
-    <Switch>
+    <BrowserRouter>
       <Route
         exact
         path="/"
@@ -11,7 +12,7 @@ function Routes() {
           return <Redirect exact to="/#welcome" />;
         }}
       />
-    </Switch>
+    </BrowserRouter>
   );
 }
 
